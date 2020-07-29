@@ -57,7 +57,7 @@ public class ArtformActivity extends AppCompatActivity {
                     startActivity(i);
                 }
                 else{
-                    nam.setError("ফআপনার নাম টাইপ করুন");
+                    nam.setError("আপনার শিল্প আকৃতি টাইপ করুন");
                 }
             }
 

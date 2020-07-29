@@ -57,7 +57,7 @@ public class NameActivity extends AppCompatActivity {
                     startActivity(i);
                 }
                 else{
-                    nam.setError("ফআপনার নাম টাইপ করুন");
+                    nam.setError("আপনার নাম টাইপ করুন");
                 }
             }
 

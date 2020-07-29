@@ -57,7 +57,7 @@ public class ExperienceActivity extends AppCompatActivity {
                     startActivity(i);
                 }
                 else{
-                    nam.setError("ফআপনার নাম টাইপ করুন");
+                    nam.setError("আপনার অভিজ্ঞতা টাইপ করুন");
                 }
             }
 

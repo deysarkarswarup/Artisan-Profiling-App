@@ -57,7 +57,7 @@ public class AddressActivity extends AppCompatActivity {
                     startActivity(i);
                 }
                 else{
-                    nam.setError("ফআপনার ঠিকানা টাইপ করুন");
+                    nam.setError("আপনার ঠিকানা টাইপ করুন");
                 }
             }
 
