@@ -21,43 +21,43 @@ import com.android.volley.toolbox.Volley;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-public class MainActivity extends AppCompatActivity {
-    TextInputLayout phno;
-    EditText mobileno;//to show error msg
+public class NameActivity extends AppCompatActivity {
+    TextInputLayout name;
+    EditText nam;//to show error msg
     Button submitbtn;
     RequestQueue requestQueue;
     ProgressDialog progressDialog;
-    String PhoneNoHolder;
+    String NameHolder;
     SharedPreferences myPref;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_name);
 
-        phno = (TextInputLayout)findViewById(R.id.phoneno);
-        mobileno = (EditText)findViewById(R.id.mobileNO);//to show error msg
+        name = (TextInputLayout)findViewById(R.id.name);
+        nam = (EditText)findViewById(R.id.nam);//to show error msg
         submitbtn = (Button)findViewById(R.id.submitBtn);
 
         //Initialize of SharedPref
         myPref = getApplicationContext().getSharedPreferences("MyPref",MODE_PRIVATE);
 
         // Creating Volley newRequestQueue .
-        requestQueue = Volley.newRequestQueue(MainActivity.this);
-        progressDialog = new ProgressDialog(MainActivity.this);
+        requestQueue = Volley.newRequestQueue(NameActivity.this);
+        progressDialog = new ProgressDialog(NameActivity.this);
 
         submitbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if (!mobileno.getText().toString().equals("")){
+                if (!nam.getText().toString().equals("")){
                     //Toast.makeText(MainActivity.this,"হয়েগেছে",Toast.LENGTH_LONG).show();
                     regUser();
-                    startActivity(new Intent(MainActivity.this, NameActivity.class));
-
+                    Intent i=new Intent(NameActivity.this,AddressActivity.class);
+                    startActivity(i);
                 }
                 else{
-                    mobileno.setError("ফোন নম্বর টাইপ করুন");
+                    nam.setError("ফআপনার নাম টাইপ করুন");
                 }
             }
 
@@ -65,12 +65,14 @@ public class MainActivity extends AppCompatActivity {
                 progressDialog.setMessage("Please Wait, We are Inserting Your Data on Server");
                 progressDialog.show();
 
-                PhoneNoHolder = phno.getEditText().getText().toString().trim();
-                Log.d("eirki",PhoneNoHolder);
-                myPref.edit().putString("phone", PhoneNoHolder).apply();
+                NameHolder = name.getEditText().getText().toString().trim();
+                Log.d("eirki",NameHolder);
+                //myPref.edit().putString("phone", PhoneNoHolder).apply();
+                String dataToGet = myPref.getString("phone","No data found");
+                Log.d("eirki",dataToGet);
 
 
-                String myurl = "http://192.168.43.12/Artisans-Profiling/phoneno.php?phoneno=" + PhoneNoHolder;
+                String myurl = "http://192.168.43.12/Artisans-Profiling/name.php?name=" + NameHolder +"&phoneno="+ dataToGet;
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
 
@@ -81,9 +83,7 @@ public class MainActivity extends AppCompatActivity {
                                 // Hiding the progress dialog after all task complete.
                                 progressDialog.dismiss();
                                 // Showing response message coming from server.
-                                Toast.makeText(MainActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
-//                                Intent i = new Intent(getApplicationContext(), NameActivity.class);
-//                                startActivity(i);
+                                Toast.makeText(NameActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
                             }
                         },
                         new Response.ErrorListener() {
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                                 // Hiding the progress dialog after all task complete.
                                 progressDialog.dismiss();
                                 // Showing error message if something goes wrong.
-                                Toast.makeText(MainActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(NameActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
 
                             }
                         });
@@ -101,8 +101,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-//        Intent i = new Intent(getApplicationContext(), NameActivity.class);
-//        startActivity(i);
+
     }
 
 }
