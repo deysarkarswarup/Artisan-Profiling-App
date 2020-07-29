@@ -71,11 +71,9 @@ public class NameActivity extends AppCompatActivity {
                 String dataToGet = myPref.getString("phone","No data found");
                 Log.d("eirki",dataToGet);
 
-
                 String myurl = "http://192.168.43.12/Artisans-Profiling/name.php?name=" + NameHolder +"&phoneno="+ dataToGet;
 
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, myurl,
                         new Response.Listener<String>() {
                             @Override

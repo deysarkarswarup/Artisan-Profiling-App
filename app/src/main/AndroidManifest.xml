@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddressActivity"></activity>
+        <activity android:name=".ArtformActivity"></activity>
+        <activity android:name=".AddressActivity" />
         <activity android:name=".NameActivity" />
 
         <meta-data
@@ -30,10 +31,6 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
-<!--        <activity-->
-<!--            android:name=".NameActivity"-->
-<!--            android:theme="@style/AppTheme" />-->
-
     </application>
 
 </manifest>
