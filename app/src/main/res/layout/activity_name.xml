@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="নিচে আপনার শিল্প আকৃতি টাইপ করুন"
+        android:text="নিচে আপনার নাম টাইপ করুন"
         android:textSize="25sp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
@@ -46,7 +46,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/artform"
+        android:id="@+id/name"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
 
@@ -61,8 +61,8 @@
             android:id="@+id/nam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="শিল্প আকৃতি"
-            android:maxLength="20"
+            android:hint="নাম"
+            android:maxLength="100"
             android:inputType="text"
             />
     </com.google.android.material.textfield.TextInputLayout>
