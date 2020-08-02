@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Artisan Profiling App</string>
+    <string name="address">নিচে আপনার ঠিকানা টাইপ করুন</string>
+    <string name="addHint">ঠিকানা</string>
+    <string name="submit">জমা দিন</string>
+    <string name="art_form">নিচে আপনার শিল্প আকৃতি টাইপ করুন</string>
+    <string name="art_form_hint">শিল্প আকৃতি</string>
+    <string name="expHint">অভিজ্ঞতা</string>
+    <string name="exp">নিচে আপনার অভিজ্ঞতা টাইপ করুন</string>
+    <string name="phone">নিচে আপনার ফোন নম্বর টাইপ করুন</string>
+    <string name="phoneHint">ফোন নম্বর</string>
+    <string name="name">নিচে আপনার নাম টাইপ করুন</string>
+    <string name="nameHint">নাম</string>
+    <string name="next">পরবর্তী</string>
+    <string name="takeAgain">আবার নিন</string>
+    <string name="yes">হ্যাঁ</string>
+    <string name="No">না</string>
+    <string name="more_pictures">আপনি কি আরো ছবি তুলতে চান?</string>
+    <string name="ClickImage">নিচে ক্যামেরা বাটন টিপুন ছবি তোলার জন্য</string>
+    <string name="CLickVideo">নিচে ক্যামেরা বাটন টিপুন আপনার পরিচিতি ভিডিও তোলার জন্য</string>
+    <string name="finish">শেষ করুন</string>
+    <string name="newEntry">নতুন তথ্য</string>
+    <string name="ThankYou">ধন্যবাদ..</string>
+    <string name="artformVideo">নিচে ক্যামেরা বাটন টিপুন আপনার আর্টফর্ম ভিডিও তোলার জন্য</string>
 </resources>
