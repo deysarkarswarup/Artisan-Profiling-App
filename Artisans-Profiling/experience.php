@@ -5,5 +5,5 @@
 		$st=$con->prepare("UPDATE `artisans` set `experience`=? where `phoneno`=?");
 		$st->bind_param("ss", $ex, $phno);
 		$st->execute();
-		echo "successful!";
+		echo "data uploaded successfully!";
 		?>

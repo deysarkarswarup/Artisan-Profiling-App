@@ -9,7 +9,7 @@
 		$st=$con->prepare("insert into artisans(phoneno) values(?)");
 		$st->bind_param("s", $_GET["phoneno"]);
 		$st->execute();
-		echo "successful!";
+		echo "data uploaded successfully!";
 		}
 		else
 			echo "User already exists!";
