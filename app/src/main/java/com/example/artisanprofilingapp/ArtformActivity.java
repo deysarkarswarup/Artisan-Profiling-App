@@ -82,6 +82,7 @@ public class ArtformActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 // Showing response message coming from server.
                                 Toast.makeText(ArtformActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
+                                myPref.edit().putString("track", "4").apply();
                             }
                         },
                         new Response.ErrorListener() {

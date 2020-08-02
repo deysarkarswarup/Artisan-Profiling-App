@@ -82,6 +82,7 @@ public class ExperienceActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 // Showing response message coming from server.
                                 Toast.makeText(ExperienceActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
+                                myPref.edit().putString("track", "5").apply();
                             }
                         },
                         new Response.ErrorListener() {

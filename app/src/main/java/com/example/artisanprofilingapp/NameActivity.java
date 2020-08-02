@@ -82,6 +82,7 @@ public class NameActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 // Showing response message coming from server.
                                 Toast.makeText(NameActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
+                                myPref.edit().putString("track", "2").apply();
                             }
                         },
                         new Response.ErrorListener() {
